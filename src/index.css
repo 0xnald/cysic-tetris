@@ -1,0 +1,36 @@
+:root{
+  /* Cysic colors are injected by the component too; keep these as fallback */
+  --cysic-bg: #0b1020;
+  --cysic-panel: #0f1724;
+  --cysic-accent: #7c3aed;
+  --cysic-accent-2: #06b6d4;
+  --cysic-text: #e6eef8;
+  --board-cell-size: 28px;
+}
+
+*{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;}
+html,body,#root{height:100%;margin:0;background:var(--cysic-bg);color:var(--cysic-text);}
+
+.app-root{max-width:1100px;margin:20px auto;padding:16px;display:flex;flex-direction:column;gap:12px;}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px;background:linear-gradient(90deg,var(--cysic-panel), rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{width:44px;height:44px;object-fit:contain;border-radius:8px}
+.brand h1{margin:0;font-size:20px}
+.controls button{margin-left:8px;padding:6px 10px;border-radius:8px;border:0;background:var(--cysic-accent);color:white;cursor:pointer}
+.main-grid{display:grid;grid-template-columns: 1fr 280px;gap:16px;align-items:start;}
+.board-wrap{background:rgba(255,255,255,0.02);padding:14px;border-radius:12px}
+.board{width:calc(var(--board-cell-size) * 10);background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:6px;border-radius:8px;display:flex;flex-direction:column;gap:4px}
+.row{display:flex;gap:4px}
+.cell{width:var(--board-cell-size);height:var(--board-cell-size);border-radius:4px;background:transparent;border:1px solid rgba(255,255,255,0.03)}
+.cell.filled{box-shadow:inset 0 -6px 8px rgba(0,0,0,0.25);border:1px solid rgba(0,0,0,0.25)}
+.side-panel{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:12px;border-radius:12px;display:flex;flex-direction:column;gap:12px}
+.stat{background:rgba(255,255,255,0.02);padding:8px;border-radius:8px}
+.stat .label{font-size:12px;opacity:0.8}
+.stat .value{font-size:20px;font-weight:700}
+.next .preview{display:flex;flex-direction:column;gap:4px;background:rgba(255,255,255,0.02);padding:8px;border-radius:8px}
+.next .prow{display:flex;gap:4px}
+.pcell{width:22px;height:22px;border-radius:4px;border:1px solid rgba(0,0,0,0.18)}
+.help ul{margin:6px 0 0 16px;padding:0}
+.footer{text-align:center;opacity:0.7;font-size:13px}
+@media (max-width:900px){.main-grid{grid-template-columns:1fr;}.board{transform:scale(0.9)}}
+
