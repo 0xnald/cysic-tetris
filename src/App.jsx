@@ -376,7 +376,7 @@ export default function App(){
         </aside>
       </main>
 
-      <footer className="footer">Built for the cysic community • v1.0 • Press M to mute • gSat 💛</footer>
+      <footer className="footer">Built for the cysic community • v1.0 • By https://x.com/0xnald • </footer>
     </div>
   );
 }
