@@ -376,7 +376,7 @@ export default function App(){
         </aside>
       </main>
 
-      <footer className="footer">Built for the cysic community • v1.0 • By https://x.com/0xnald • </footer>
+      <footer className="footer">Built for the cysic community • v1.0 • By <a href="https://x.com/0xnald" target="_blank" rel="noopener noreferrer">@0xnald</a> </footer>
     </div>
   );
 }
